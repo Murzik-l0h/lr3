@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Generator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="tabs">
+        <div class="tab whiteborder">border-radius</div>
+        <div class="tab">vertical-align</div>
+        <div class="tab">visability</div>
+        <div class="tabContent">
+            <div>
+                <div>Верхній лівий кут:</div>
+                <input type="range" id="rtl" min="0" max="100" value="0" oninput="generate()">
+                <input id="ttl" type="number" value="0" oninput="change()">
+            </div>
+            <div>
+                <div>Верхній правий кут:</div>
+                <input type="range" id="rtr" min="0" max="100" value="0" oninput="generate()">
+                <input id="ttr" type="number" value="0" oninput="change()">
+            </div>
+            <div>
+                <div>Нижній правий кут:</div>
+                <input type="range" id="rbr" min="0" max="100" value="0" oninput="generate()">
+                <input id="tbr" type="number" value="0" oninput="change()">
+            </div>
+            <div>
+                <div>Нижній лівий кут:</div>
+                <input type="range" id="rbl" min="0" max="100" value="0" oninput="generate()">
+                <input id="tbl" type="number" value="0" oninput="change()">
+            </div>
+            <div id="block"></div>
+            <div>CSS Code:
+                <textarea type="text" id="code" readonly></textarea>
+            </div>
+        </div>
+        <div class="tabContent">
+            <div>vertical-align
+                <select name="" id="verticalAlignType" onchange="changeVerticalAlign()">
+                    <option value="top" selected>top</option>
+                    <option value="middle">middle</option>
+                    <option value="bottom">bottom</option>
+                    <option value="text-top">text-top</option>
+                    <option value="text-bottom">text-bottom</option>
+                    <option value="sub">sub</option>
+                    <option value="baseline">baseline</option>
+                    <option value="super">super</option>
+                </select>
+            </div>
+            <div id="block1">STAS</div>
+            <div>CSS Code:
+                <textarea type="text" id="code1" readonly>vertical-align: top;</textarea>
+            </div>
+        </div>
+        <div class="tabContent">
+            <div>Visibility
+                <select name="" id="visibilityType" onchange="changeVisibility()">
+                    <option value="visible" selected>visible</option>
+                    <option value="hidden">hidden</option>
+                </select>
+            </div>
+            <div id="block2"></div>
+            <div>CSS Code:
+                <textarea type="text" id="code2" readonly>visibility: visible;</textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
